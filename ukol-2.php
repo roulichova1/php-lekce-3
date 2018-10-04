@@ -12,19 +12,28 @@
 <body>
 <br>
 <div class="container">
-
-
-
     <table class="table table-bordered">
-        <tr>
-            <td>prvni sloupec</td>
-            <td>druhy sloupec</td>
-        </tr>
-    </table>
-
-
-
-
+<?php
+    $radek = 1;
+    $soucet = 1;
+    $maximum = 5;
+    
+    while ($radek <= $maximum) {
+        if (($radek % 2)== 0) {     //zbytek po dělení 2 je nula
+            $trida = 'class="alert-info"';
+        } else {
+            $trida = '';
+        }
+        echo "<tr $trida>
+            <td>$radek</td>
+            <td>$soucet</td>
+        </tr>";
+        $radek = $radek + 1;
+        $soucet = $radek + $soucet;
+    }
+    
+    ?>
+</table>
 </div>
 </body>
 </html>
